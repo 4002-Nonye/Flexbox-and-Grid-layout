@@ -1,0 +1,164 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: whitesmoke;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 6rem;
+	width: 100%;
+	padding: 0 6rem;
+	z-index: 100;
+	background-color: white;
+}
+.nav__logo {
+	height: 4.5rem;
+	font: bold 25px monospace;
+	color: black;
+}
+
+.highlight::after {
+	content: ".";
+	color: red;
+	font-size: 2rem;
+}
+
+.nav__links {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.nav__item {
+	margin-left: 4rem;
+	display: flex;
+}
+.nav__link {
+	background-color: whitesmoke;
+	height: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 10rem;
+	border-radius: 1.55rem;
+	text-decoration: none;
+	color: hsl(0, 100%, 74%);
+	font: bold 15px garamond;
+	text-transform: uppercase;
+	transition: all 1s;
+}
+
+.nav__link:hover {
+	background-color: hsl(248, 32%, 49%);
+	color: #ffffff;
+}
+
+.box:nth-child(1) {
+	background-color: rgb(254, 80, 0);
+	padding: 5rem;
+}
+
+.box:nth-child(2) {
+	background-color: rgb(255, 165, 0);
+	padding: 5rem;
+}
+
+.box:nth-child(3) {
+	background-color: green;
+	padding: 6rem;
+	grid-row: 2/4;
+}
+
+.box:nth-child(4) {
+	background-color: #00bcd4;
+	padding: 1rem;
+}
+
+.box:last-child {
+	background-color: #00bcd4;
+	padding: 1.5rem;
+}
+
+.grid__container {
+	padding-block: 7rem;
+	width: min(95%, 30rem);
+	margin-inline: auto;
+	display: grid;
+
+	/*grid-template-columns: repeat(3, 1fr);*/
+	gap: 0.5rem;
+}
+
+@media (min-width: 40em) {
+	.grid-colspan2 {
+		grid-column: span 2;
+	}
+
+	.grid__container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.box:nth-child(3) {
+		background-color: green;
+		padding: 6rem;
+		grid-column-start: 1;
+		grid-row: 2/4;
+	}
+}
+
+@media (max-width: 673px) {
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4rem;
+		width: 100%;
+		padding: 0 2rem;
+		z-index: 100;
+		background-color: white;
+	}
+	.nav__logo {
+		height: 4.5rem;
+		font: bold 15px monospace;
+		color: black;
+	}
+
+	.highlight::after {
+		content: ".";
+		color: red;
+		font-size: 1.5rem;
+	}
+
+	.nav__links {
+		display: flex;
+		align-items: center;
+		list-style: none;
+	}
+
+	.nav__item {
+		margin-left: 2rem;
+		display: flex;
+	}
+	.nav__link {
+		background-color: unset;
+		height: 1.5rem;
+		display: flex;
+		text-decoration: none;
+		color: hsl(0, 100%, 74%);
+		font: bold 10px garamond;
+		text-transform: uppercase;
+		transition: all 1s;
+	}
+}

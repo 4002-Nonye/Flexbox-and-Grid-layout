@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color-bright-orange: hsl(31, 77%, 52%);
+	--primary-color-dark-cyan: hsl(184, 100%, 22%);
+	--primary-color-very-dark-cyan: hsl(179, 100%, 13%);
+	--neutral-color-transparent-white: hsla(0, 0%, 100%, 0.75);
+	--neutral-color-very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+	background: var(--neutral-color-very-light-gray);
+
+	width: 100%;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 4rem;
+	width: 100%;
+	padding: 0 6rem;
+	z-index: 100;
+}
+.nav__logo {
+	height: 4.5rem;
+	font: bold 25px monospace;
+	color: black;
+}
+
+.highlight::after {
+	content: ".";
+	color: red;
+	font-size: 2rem;
+}
+
+.nav__links {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.nav__item {
+	margin-left: 4rem;
+	display: flex;
+}
+.nav__link {
+	background-color: whitesmoke;
+	height: 2.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 10rem;
+	border-radius: 1.55rem;
+	text-decoration: none;
+	color: hsl(0, 100%, 74%);
+	font: bold 15px garamond;
+	text-transform: uppercase;
+	transition: all 1s;
+}
+
+.nav__link:hover {
+	background-color: hsl(248, 32%, 49%);
+	color: #ffffff;
+}
+.box__container {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	margin: 4rem auto;
+}
+button a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.sedans {
+	background-color: var(--primary-color-bright-orange);
+	padding: 2.5rem;
+	width: 20rem;
+	height: 30rem;
+
+	border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+}
+
+.suvs {
+	background-color: var(--primary-color-dark-cyan);
+	padding: 2.5rem;
+	width: 20rem;
+	height: 30rem;
+}
+
+.luxury {
+	background-color: var(--primary-color-very-dark-cyan);
+
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	padding: 2.5rem;
+	width: 20rem;
+	height: 30rem;
+}
+
+.car {
+	text-transform: uppercase;
+	color: var(--neutral-color-very-light-gray);
+	font-family: "Lexend Deca", sans-serif;
+	margin: 1rem 0;
+}
+
+p {
+	color: var(--neutral-color-transparent-white);
+	font-size: 15px;
+	padding: 1rem 0;
+	line-height: 1.5em;
+	justify-content: flex-start;
+
+	font-family: "Big Shoulders Display", cursive;
+}
+.btn__learnmore {
+	background-color: var(--neutral-color-very-light-gray);
+	cursor: pointer;
+	width: 8rem;
+
+	border: none;
+	height: 2.5rem;
+	justify-content: space-around;
+	border-radius: 2.35rem;
+	font: 15px;
+	margin: 3rem 0;
+}
+.btn__sedans {
+	color: var(--primary-color-bright-orange);
+	transition: all 2s;
+}
+
+.btn__suvs {
+	color: var(--primary-color-dark-cyan);
+	transition: all 2s;
+}
+
+.btn__luxury {
+	color: var(--primary-color-dark-cyan);
+	transition: all 2s;
+}
+
+.btn__sedans:hover {
+	background: var(--primary-color-bright-orange);
+	border: 1px solid white;
+
+	color: white;
+}
+
+.btn__suvs:hover {
+	background: var(--primary-color-dark-cyan);
+	border: 1px solid white;
+
+	color: white;
+}
+
+.btn__luxury:hover {
+	background: var(--primary-color-very-dark-cyan);
+	border: 1px solid white;
+
+	color: white;
+}
+
+@media all and (max-width: 980px) {
+	.box__container {
+		width: 100%;
+		max-width: 1440px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+	}
+}
+
+@media (max-width: 580px) {
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4rem;
+		width: 100%;
+		padding: 0 2rem;
+		z-index: 100;
+		background-color: white;
+	}
+	.nav__logo {
+		height: 4.5rem;
+		font: bold 18px monospace;
+		color: black;
+	}
+
+	.highlight::after {
+		content: ".";
+		color: red;
+		font-size: 1.5rem;
+	}
+
+	.nav__links {
+		display: flex;
+		align-items: center;
+		list-style: none;
+	}
+
+	.nav__item {
+		margin-left: 2rem;
+		display: flex;
+	}
+	.nav__link {
+		background-color: unset;
+		height: 1.5rem;
+		display: flex;
+		text-decoration: none;
+		color: hsl(0, 100%, 74%);
+		font: bold 18px garamond;
+		text-transform: uppercase;
+		transition: all 1s;
+	}
+}
